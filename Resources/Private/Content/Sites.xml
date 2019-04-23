@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+ <site name="goerisch" state="1" siteResourcesPackageKey="GeosphereWeb.DrGoerisch" siteNodeName="goerisch">
+  <nodes formatVersion="2.0">
+   <node identifier="72b02a03-b694-423a-9459-f1c2369721b2" nodeName="goerisch">
+    <variant sortingIndex="100" workspace="live" nodeType="GeosphereWeb.DrGoerisch:Document.Homepage" version="2" removed="" hidden="" hiddenInIndex="">
+     <dimensions>
+      <language>de</language>
+     </dimensions>
+     <accessRoles __type="array"/>
+     <creationDateTime __type="object" __classname="DateTime">2019-04-21T17:06:08+00:00</creationDateTime>
+     <lastModificationDateTime __type="object" __classname="DateTime">2019-04-21T17:27:53+00:00</lastModificationDateTime>
+     <lastPublicationDateTime __type="object" __classname="DateTime">2019-04-21T17:27:53+00:00</lastPublicationDateTime>
+     <properties>
+      <uriPathSegment __type="string">goerisch</uriPathSegment>
+      <title __type="string">Artzpraxis Dr. Görisch</title>
+     </properties>
+    </variant>
+    <node identifier="f3a84482-3057-c3b0-28d7-29808454268e" nodeName="footer">
+     <variant sortingIndex="400" workspace="live" nodeType="GeosphereWeb.Bootstrap43:Collection.Content.Footer" version="1" removed="" hidden="" hiddenInIndex="">
+      <dimensions>
+       <language>de</language>
+      </dimensions>
+      <accessRoles __type="array"/>
+      <creationDateTime __type="object" __classname="DateTime">2019-04-21T17:06:09+00:00</creationDateTime>
+      <lastModificationDateTime __type="object" __classname="DateTime">2019-04-21T17:06:09+00:00</lastModificationDateTime>
+      <properties/>
+     </variant>
+    </node>
+    <node identifier="9fea823f-814e-810e-031f-ebdc3d8c1b82" nodeName="main">
+     <variant sortingIndex="200" workspace="live" nodeType="GeosphereWeb.Bootstrap43:Collection.Content.Main" version="1" removed="" hidden="" hiddenInIndex="">
+      <dimensions>
+       <language>de</language>
+      </dimensions>
+      <accessRoles __type="array"/>
+      <creationDateTime __type="object" __classname="DateTime">2019-04-21T17:06:08+00:00</creationDateTime>
+      <lastModificationDateTime __type="object" __classname="DateTime">2019-04-21T17:06:08+00:00</lastModificationDateTime>
+      <properties/>
+     </variant>
+    </node>
+    <node identifier="9eb441d2-9b9e-4f7c-2567-574727542c7d" nodeName="notfound">
+     <variant sortingIndex="300" workspace="live" nodeType="GeosphereWeb.Bootstrap43:Document.NotFoundPage" version="1" removed="" hidden="1" hiddenInIndex="1">
+      <dimensions>
+       <language>de</language>
+      </dimensions>
+      <accessRoles __type="array"/>
+      <creationDateTime __type="object" __classname="DateTime">2019-04-21T17:06:08+00:00</creationDateTime>
+      <lastModificationDateTime __type="object" __classname="DateTime">2019-04-21T17:06:08+00:00</lastModificationDateTime>
+      <properties>
+       <uriPathSegment __type="string">notfound</uriPathSegment>
+       <metaRobotsNoindex __type="boolean">1</metaRobotsNoindex>
+       <title __type="string">Not Found</title>
+      </properties>
+     </variant>
+     <node identifier="9af7c36d-6fc0-a36a-8fde-a80436d00948" nodeName="main">
+      <variant sortingIndex="200" workspace="live" nodeType="GeosphereWeb.Bootstrap43:Collection.Content.Main" version="1" removed="" hidden="" hiddenInIndex="">
+       <dimensions>
+        <language>de</language>
+       </dimensions>
+       <accessRoles __type="array"/>
+       <creationDateTime __type="object" __classname="DateTime">2019-04-21T17:06:09+00:00</creationDateTime>
+       <lastModificationDateTime __type="object" __classname="DateTime">2019-04-21T17:06:09+00:00</lastModificationDateTime>
+       <properties/>
+      </variant>
+     </node>
+     <node identifier="58b2a2fa-8ae8-e03b-d564-9bce4a3e593e" nodeName="teaser">
+      <variant sortingIndex="100" workspace="live" nodeType="GeosphereWeb.Bootstrap43:Collection.Content.Teaser" version="1" removed="" hidden="" hiddenInIndex="">
+       <dimensions>
+        <language>de</language>
+       </dimensions>
+       <accessRoles __type="array"/>
+       <creationDateTime __type="object" __classname="DateTime">2019-04-21T17:06:09+00:00</creationDateTime>
+       <lastModificationDateTime __type="object" __classname="DateTime">2019-04-21T17:06:09+00:00</lastModificationDateTime>
+       <properties/>
+      </variant>
+     </node>
+    </node>
+    <node identifier="eec98a99-dc3c-b690-fd91-5203f5e8b796" nodeName="teaser">
+     <variant sortingIndex="100" workspace="live" nodeType="GeosphereWeb.Bootstrap43:Collection.Content.Teaser" version="1" removed="" hidden="" hiddenInIndex="">
+      <dimensions>
+       <language>de</language>
+      </dimensions>
+      <accessRoles __type="array"/>
+      <creationDateTime __type="object" __classname="DateTime">2019-04-21T17:06:08+00:00</creationDateTime>
+      <lastModificationDateTime __type="object" __classname="DateTime">2019-04-21T17:06:08+00:00</lastModificationDateTime>
+      <properties/>
+     </variant>
+    </node>
+   </node>
+  </nodes>
+ </site>
+</root>

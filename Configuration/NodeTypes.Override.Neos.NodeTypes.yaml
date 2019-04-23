@@ -1,0 +1,8 @@
+##
+# Declare nodetypes from Neos.NodeTypes abstract that are replaced
+# in the Neos.Demo package namespace
+#
+'GeosphereWeb.Bootstrap43:Document.Homepage':
+  abstract: true
+
+

@@ -1,0 +1,67 @@
+/**
+ *  Special landing page layout with less navigation components
+ */
+prototype(GeosphereWeb.DrGoerisch:Document.LandingPage) < prototype(Neos.Fusion:Component) {
+    mainMenu = GeosphereWeb.Bootstrap43:Document.Fragment.Menu.Main
+    secondaryMenu = GeosphereWeb.Bootstrap43:Document.Fragment.Menu.Secondary
+    languageMenu = GeosphereWeb.Bootstrap43:Document.Fragment.Menu.Language
+    metaMenu = GeosphereWeb.Bootstrap43:Document.Fragment.Menu.Meta
+    breadcrumbMenu = GeosphereWeb.Bootstrap43:Document.Fragment.Menu.Breadcrumb
+
+    teaserContent = GeosphereWeb.Bootstrap43:Document.Fragment.Content.Teaser
+    mainContent = GeosphereWeb.Bootstrap43:Document.Fragment.Content.Main
+    footerContent = GeosphereWeb.Bootstrap43:Document.Fragment.Content.Footer
+
+
+    imageUri = Neos.Neos:ImageUri {
+        asset = ${q(node).property('image')}
+        maximumWidth = 2560
+        maximumHeight = 1280
+        @if.image = ${q(node).property('image')}
+    }
+
+    imageTitleText = ${q(node).property('imageTitleText')}
+
+    renderer = GeosphereWeb.Bootstrap43:Document.Base {
+        bodyClass = ${q(node).parents().count() >= 1 && q(node).children('[instanceof Neos.Neos:Document]').filter('[_hiddenInIndex=false]').count() > 0 ? 'has-subpages' : null}
+
+        body >
+        body = afx`
+             <div class="top-navigation-wrap">
+                <div class="container">
+                    {props.languageMenu}
+                    {props.mainMenu}
+                    {props.secondaryMenu}
+                </div>
+            </div>
+
+            <div class={props.imageUri ? 'main-header image' : 'main-header'}
+                style={props.imageUri ? 'background-image: url(' + props.imageUri + ');' : null}
+                title={props.imageTitleText ? props.imageTitleText : null}
+            >
+                <div class="container">
+                    {props.teaserContent}
+                </div>
+            </div>
+
+            <div class="container">
+                {props.mainContent}
+            </div>
+
+            <footer role="navigation" class="navbar navbar-default">
+                <div class="panel panel-default">
+                    <div class="panel-body clearfix">
+                        <div class="container">
+                            {props.metaMenu}
+                        </div>
+                    </div>
+                    <div class="panel-footer">
+                        <div class="container">
+                            {props.footerContent}
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        `
+    }
+}

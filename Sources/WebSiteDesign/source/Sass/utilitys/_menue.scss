@@ -1,0 +1,173 @@
+$background-color: rgb(21, 78, 126);
+$top-navi-bgr-hover: rgba(21, 78, 126, 0.9);
+
+$top-navi-bgr: $top-navi-bgr-hover;
+$navi-text-color: rgb(22, 113, 183);
+
+$navi-sec-line-color: rgba(238, 235, 236, 0.72);
+$navi-sec-text-color: white;
+
+// LOGO
+DIV.topNavigation NAV.navi-top {
+  // LOGO
+  DIV.logo {
+    position: relative;
+    width: 250px;
+
+    height: 50px;
+    margin-left: 20px;
+    order: 1;
+    flex-shrink: 0;
+
+    IMG {
+      position: absolute;
+      bottom: 0px;
+    }
+  }
+}
+
+// //////////////////////////////////////////////////
+// Container für die Navigation
+//
+DIV.topNavigation {
+  z-index: 1000;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  box-shadow: 0px 5px 20px rgba(128, 128, 128, 0.55);
+  margin-bottom: 50px;
+  position: sticky;
+  top: 0px;
+
+  // ///////////////////
+  // Generele Eigenschaften (Farbe; Liststyle)
+  NAV.navi-top {
+    display: flex;
+
+    A {
+      text-decoration: none;
+      text-wrap: none;
+      display: inline;
+      color: $navi-text-color;
+
+      &:hover {
+        color: $navi-text-color;
+      }
+    }
+
+    UL {
+      list-style: none;
+      margin: 0px;
+      padding: 0px;
+    }
+  }
+}
+
+// //////////////////////////////////////////////////
+// First Navigation
+//
+DIV.topNavigation NAV.navi-top UL.navi-top-first {
+  order: 0;
+  display: flex;
+  justify-content: center;
+
+  LI {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0px 20px;
+    align-content: center;
+
+    A {
+      display: inline-block;
+    }
+
+    ///////
+    // LI HOVER
+    &:hover {
+      background-color: $background-color;
+      transition: background-color 350ms;
+
+      :first-child {
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+      }
+
+      :last-child {
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+      }
+
+      A {
+        color: white;
+      }
+
+      DIV.navi-top-second {
+        //visibility: visible;
+        max-height: 100vh;
+      }
+    }
+  }
+}
+
+/////////////////////////////////
+// Second Navigation
+DIV.topNavigation NAV.navi-top UL.navi-top-first DIV.navi-top-second {
+  display: flex;
+  color: $navi-sec-text-color;
+  position: absolute;
+  left: 0px;
+  top: 100%;
+  width: 100%;
+  justify-content: center;
+  max-height: 0px;
+  overflow-y: hidden;
+  transition: max-height 500ms;
+
+  A {
+    color: $navi-sec-text-color;
+  }
+
+  & > DIV {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: stretch;
+
+    margin-left: 60px;
+    margin-right: 60px;
+    background-color: $top-navi-bgr;
+    min-width: 600px;
+    max-width: 1060px;
+    //justify-items: center;
+    padding: 10px;
+
+    DIV {
+      margin: 20px 0px 0px;
+      padding: 0px 10px;
+      border-left: $navi-sec-line-color 2px solid;
+      border-right: $navi-sec-line-color 2px solid;
+
+      UL {
+        border-radius: 5px;
+
+        &:hover {
+          background-color: rgba(91, 92, 98, 0.53);
+          transition: background-color 500ms;
+        }
+      }
+    }
+  }
+
+  .headline {
+    font-weight: bold;
+  }
+}
+
+// //////////////////////////////////////////////////
+// Language Menue
+//
+DIV.topNavigation .langMenue {
+  display: none;
+}

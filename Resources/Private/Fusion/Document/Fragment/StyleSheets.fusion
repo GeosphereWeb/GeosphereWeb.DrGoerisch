@@ -1,0 +1,11 @@
+/**
+ * Stylesheets of the page to be included in the header
+ */
+prototype(GeosphereWeb.Bootstrap43:Document.Fragment.StyleSheets) < prototype(Neos.Fusion:Component) {
+    renderer = afx`
+        <GeosphereWeb.Bootstrap43:Helper.StyleTag path="resource://GeosphereWeb.DrGoerisch/Public/Styles/style.css"/>
+    `
+
+//    <GeosphereWeb.Bootstrap43:Helper.StyleTag path="resource://GeosphereWeb.Bootstrap43/Public/Styles/GeosphereWeb-Bootstrap43.css" />
+//    <GeosphereWeb.Bootstrap43:Helper.StyleTag path="resource://GeosphereWeb.Bootstrap43/Public/Styles/Print.css" media="print" />
+}

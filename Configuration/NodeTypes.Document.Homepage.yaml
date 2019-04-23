@@ -1,0 +1,17 @@
+##
+# Special homepage nodetype that declares a footer child node for usage as shared footer.
+#
+'GeosphereWeb.DrGoerisch:Document.Homepage':
+#  ui:
+#    label: i18n
+#    icon: 'globe'
+#    help:
+#     message: 'The homepage type is to be used only once and adds the shared footer.'
+  superTypes:
+    'GeosphereWeb.Bootstrap43:Document.Homepage': true
+#  childNodes:
+#    'notfound':
+#      type: 'GeosphereWeb.Bootstrap43:Document.NotFoundPage'
+#    'footer':
+#      position: 'end'
+#      type: 'GeosphereWeb.Bootstrap43:Collection.Content.Footer'

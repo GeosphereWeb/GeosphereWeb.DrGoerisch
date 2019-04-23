@@ -1,0 +1,48 @@
+/**
+ * Default page-rendering for the Neos.Demo website
+ */
+prototype(GeosphereWeb.DrGoerisch:Document.Page) < prototype(Neos.Fusion:Component) {
+//    mainMenu = GeosphereWeb.Bootstrap43:Document.Fragment.Menu.Main
+//    secondaryMenu = GeosphereWeb.Bootstrap43:Document.Fragment.Menu.Secondary
+//    metaMenu = GeosphereWeb.Bootstrap43:Document.Fragment.Menu.Meta
+//    breadcrumbMenu = GeosphereWeb.Bootstrap43:Document.Fragment.Menu.Breadcrumb
+//    languageMenu = GeosphereWeb.Bootstrap43:Document.Fragment.Menu.Language
+
+    mainContent = GeosphereWeb.Bootstrap43:Document.Fragment.Content.Main
+    footerContent = GeosphereWeb.Bootstrap43:Document.Fragment.Content.Footer
+
+    bodyClass = ${q(node).parents().count() >= 1 && q(node).children('[instanceof Neos.Neos:Document]').filter('[_hiddenInIndex=false]').count() > 0 ? 'has-subpages' : null}
+
+    renderer = GeosphereWeb.Bootstrap43:Document.Base {
+        bodyClass = ${props.bodyClass}
+        body = afx`
+            <div class="top-navigation-wrap">
+                <div class="container">
+                    {props.languageMenu}
+                    {props.mainMenu}
+                    {props.secondaryMenu}
+                </div>
+            </div>
+
+            <div class="container">
+                {props.breadcrumbMenu}
+                {props.mainContent}
+            </div>
+
+            <footer role="navigation" class="navbar navbar-default">
+                <div class="panel panel-default">
+                    <div class="panel-body clearfix">
+                        <div class="container">
+                            {props.metaMenu}
+                        </div>
+                    </div>
+                    <div class="panel-footer">
+                        <div class="container">
+                            {props.footerContent}
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        `
+    }
+}

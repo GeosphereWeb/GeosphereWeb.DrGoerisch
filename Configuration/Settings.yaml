@@ -1,0 +1,28 @@
+Neos:
+  Neos:
+    fusion:
+      autoInclude:
+        'GeosphereWeb.Bootstrap43': true
+        'GeosphereWeb.DrGoerisch': true
+  ContentRepository:
+    contentDimensions:
+      'language':
+        label: 'GeosphereWeb.Bootstrap43:Main:contentDimensions.language'
+        icon: icon-language
+        default: 'de'
+        defaultPreset: 'de'
+        presets:
+          'de':
+            label: 'German'
+            values: ['de']
+            uriSegment: 'de'
+          'en':
+            label: 'English (US)'
+            values: ['en', 'de']
+            uriSegment: 'en'
+#    nodeTypes:
+#      groups:
+#        'GeosphereWeb':
+#          position: 300
+#          label: 'Geosphere : APEX Engineering'
+#          collapsed: false

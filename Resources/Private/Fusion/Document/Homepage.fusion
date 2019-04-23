@@ -1,0 +1,5 @@
+/**
+ * Homepage rendering for the GeosphereWeb.DrGoerisch website
+ */
+//prototype(GeosphereWeb.DrGoerisch:Document.Homepage) < prototype(GeosphereWeb.Bootstrap43:Document.Homepage)
+prototype(GeosphereWeb.DrGoerisch:Document.Homepage) < prototype(GeosphereWeb.DrGoerisch:Document.LandingPage)
